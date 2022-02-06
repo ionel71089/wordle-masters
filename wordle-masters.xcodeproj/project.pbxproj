@@ -19,6 +19,7 @@
 		C52185C527AECB1A0049E2E0 /* LetterMatrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52185C427AECB1A0049E2E0 /* LetterMatrix.swift */; };
 		C52185C727AEDD940049E2E0 /* LetterMatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52185C627AEDD940049E2E0 /* LetterMatrixTests.swift */; };
 		C52F371827AEF24500B95FBE /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F371727AEF24500B95FBE /* KeyboardView.swift */; };
+		C5B5772D27AF0A27001CD4C5 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B5772C27AF0A27001CD4C5 /* Matrix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		C52185C427AECB1A0049E2E0 /* LetterMatrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterMatrix.swift; sourceTree = "<group>"; };
 		C52185C627AEDD940049E2E0 /* LetterMatrixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterMatrixTests.swift; sourceTree = "<group>"; };
 		C52F371727AEF24500B95FBE /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		C5B5772C27AF0A27001CD4C5 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				C521859827AEB5150049E2E0 /* Preview Content */,
 				C52185BC27AEB6E90049E2E0 /* LetterSquareView.swift */,
 				C52185C227AEC93B0049E2E0 /* LetterGridView.swift */,
+				C5B5772C27AF0A27001CD4C5 /* Matrix.swift */,
 				C52185C427AECB1A0049E2E0 /* LetterMatrix.swift */,
 				C52F371727AEF24500B95FBE /* KeyboardView.swift */,
 			);
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B5772D27AF0A27001CD4C5 /* Matrix.swift in Sources */,
 				C52185C527AECB1A0049E2E0 /* LetterMatrix.swift in Sources */,
 				C52185C327AEC93B0049E2E0 /* LetterGridView.swift in Sources */,
 				C521859527AEB5130049E2E0 /* ContentView.swift in Sources */,

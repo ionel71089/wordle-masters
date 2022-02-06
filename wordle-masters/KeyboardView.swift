@@ -43,7 +43,11 @@ struct KeyboardView: View {
                     KeyView(key: "")
                         .frame(height: 50)
                         .padding(.leading, 2)
-                        .overlay(Image(systemName: "return"))
+                        .overlay(
+                            Image(systemName: "return")
+                                .renderingMode(.template)
+                                .foregroundColor(.black)
+                        )
                         .onTapGesture {
                             if let input = letterMatrix.currentInput {
                                 letterMatrix.submit(guess: input)
@@ -61,7 +65,11 @@ struct KeyboardView: View {
                     KeyView(key: "")
                         .padding(.trailing, 2)
                         .frame(height: 50)
-                        .overlay(Image(systemName: "delete.backward"))
+                        .overlay(
+                            Image(systemName: "delete.backward")
+                                .renderingMode(.template)
+                                .foregroundColor(.black)
+                        )
                         .onTapGesture {
                             letterMatrix.removeLast()
                         }
@@ -76,9 +84,6 @@ struct KeyboardView: View {
 private func getKeyWidth(width: CGFloat, spacing: CGFloat, columns: Int) -> CGFloat {
     let columns = CGFloat(columns)
     let width = (width - spacing * (columns + 1)) / columns
-    print("\(width)")
-    print(width.isNaN)
-    print(width.isInfinite)
     return floor(width)
 }
 
@@ -97,6 +102,13 @@ struct KeyView: View {
 
 struct KeyboardView_Previews: PreviewProvider {
     static var previews: some View {
-        KeyboardView(letterMatrix: .constant(LetterMatrix(word: "evade")))
+        Group {
+            KeyboardView(letterMatrix: .constant(LetterMatrix(word: "evade")))
+                .preferredColorScheme(.light)
+                .previewLayout(.sizeThatFits)
+            KeyboardView(letterMatrix: .constant(LetterMatrix(word: "evade")))
+                .preferredColorScheme(.dark)
+                .previewLayout(.sizeThatFits)
+        }
     }
 }

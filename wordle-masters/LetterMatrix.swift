@@ -40,6 +40,10 @@ enum LetterState: Equatable {
     func misplaced() -> LetterState {
         .misplaced(letter: letter)
     }
+    
+    func temporary() -> LetterState {
+        .temporary(letter: letter)
+    }
 }
 
 extension String {
@@ -64,7 +68,7 @@ extension String {
     }
 }
 
-struct LetterData: Identifiable {
+struct LetterData: Identifiable, Equatable {
     var id: String {
         "\(row):\(column)"
     }
@@ -86,6 +90,10 @@ struct LetterData: Identifiable {
     
     func misplaced() -> LetterData {
         LetterData(row: row, column: column, state: state.misplaced())
+    }
+    
+    func temporary() -> LetterData {
+        LetterData(row: row, column: column, state: state.temporary())
     }
 }
 
